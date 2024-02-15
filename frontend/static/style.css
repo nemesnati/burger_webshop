@@ -1,0 +1,310 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'montserrat';
+    text-decoration: none;
+    list-style: none;
+    scroll-behavior: smooth;
+}
+
+body{
+    width:100%;
+    height:auto;
+}
+
+div#root {
+    display: flex;
+    flex-direction: column;
+}
+
+header {
+    background-color: #fff;
+   
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 10%;
+}
+
+.logo{
+    font-size: 30px;
+    font-weight: 800;
+    color: rgb(128, 76, 12);
+    text-transform: uppercase;
+    letter-spacing: 1.5px;
+    cursor: pointer;
+    transition: all 0.5s ease;
+}
+
+.logo:hover{
+    color: rgb(255, 118, 64);
+}
+
+.navbars {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 20px
+}
+
+.navbars a {
+    color: rgb(128, 76, 12);
+    font-size: 16px;
+    font-weight: 600;
+    padding: 5px 10px;
+    margin: 2px 25px;
+    border-bottom: 2px solid transparent;
+    transition: all .40s ease;
+}
+
+.navbars a:hover {
+    border-bottom: 2px solid rgb(255, 118, 64);
+    color: brown;
+    cursor: pointer;
+}
+
+.h-icons{
+    padding: 6px 14px;
+    background: rgb(128, 76, 12);
+    border-radius: 5rem;
+}
+
+.h-icons i{
+    color: rgb(255, 118, 64);
+    font-size: 18px;
+    margin-right: 15px;
+    margin-left: 8px;
+}
+
+.show{
+    display: active;
+}
+
+.navigators {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 20px
+}
+
+main {
+    height: 85vh;
+    background-color: #fff;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    
+}
+
+.textbox{
+    width: 40%;
+    line-height: 2;
+    font-size: 22px;
+    text-align: justify;
+}
+
+.textbox h1{
+    font-size: 32px;
+    margin-bottom: 1rem;
+}
+
+.textbox p{
+    font-size: 24px;
+    font-weight: 500;
+    color: black;
+    line-height: 40px;
+    margin-bottom: 2.3rem;
+}
+
+.picture img{
+    height: 400px;
+    width: auto;
+}
+
+.about-text {
+    width: 70%;
+    letter-spacing: 0.1em;
+    line-height: 2;
+    font-size: 22px;
+    text-align: justify;
+}
+
+.row {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    margin: 0 -16px;
+    gap: 10px;
+  }
+  
+  .col-25 {
+    flex: 25%;
+  }
+  
+  .col-50 {
+    flex: 50%;
+  }
+  
+  .col-75 {
+    flex: 75%;
+  }
+  
+  .col-25,
+  .col-50,
+  .col-75 {
+    padding: 0 16px;
+  }
+  
+  .container {
+    background-color: #f2f2f2;
+    padding: 5px 15px 10px 15px;
+    border: 1px solid lightgrey;
+    border-radius: 3px;
+  }
+  
+  input[type=text] {
+    width: 100%;
+    margin-bottom: 10px;
+    padding: 5px;
+    border: 1px solid #ccc;
+    border-radius: 3px;
+  }
+  
+  label {
+    margin-bottom: 10px;
+    display: block;
+  }
+  
+  .icon-container {
+    margin-bottom: 20px;
+    padding: 7px 0;
+    font-size: 20px;
+  }
+  
+.btn {
+    background-color: brown;
+    color: white;
+    padding: 6px;
+    margin: 5px 0;
+    border: none;
+    width: 100%;
+    border-radius: 3px;
+    cursor: pointer;
+    font-size: 13px;
+}
+  
+.btn:hover {
+    background-color: lightsalmon;
+}
+  
+span.price {
+    float: right;
+    color: grey;
+}
+
+span.cart-price {
+    float: right;
+    color: grey;
+}
+
+.pizza-container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    width: 70%;
+    justify-content: center;
+    align-items: center;
+}
+
+.pizzacard {
+    width: 15%;
+    height: 240px;
+   
+    text-align: center;
+    cursor: pointer;
+    word-wrap: break-word; 
+    overflow-wrap: break-word;
+    transition: all 0.5s ease;
+
+    display: flex;
+    flex-direction: column;
+    gap: 3px;
+}
+
+.burgercard:hover{
+    box-shadow: 0px 0px 0px 2px brown;
+    border-radius: 10px;
+}
+
+.burgercard img{
+    width: 20%;
+    height: auto;
+}
+
+.cart-container{
+    display: flex;
+    gap: 35px
+}
+
+div.burger-price{
+    float: right;
+}
+
+main,
+div.about-text,
+div.burger-container,
+div.row,
+#burgerBuilder{
+    opacity: 0;
+    animation: fadeIn 1.2s ease-in-out forwards;
+  }
+  
+  @keyframes fadeIn {
+    from {
+      opacity: 0;
+    }
+    to {
+      opacity: 1;
+    }
+  }
+
+  #burgerBuilder {
+    display: flex;
+    justify-content: space-evenly;
+    flex-direction: column;
+    background-color: #fff;
+    padding: 10px;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    align-items: center;
+    width:60%;
+    gap:20px
+}
+
+.toppings {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    gap: 30px;
+}
+
+#burgerBuilder h2{
+    margin: 20px 10px
+}
+
+button.wish-btn {
+    width: 20%;
+    height: 30px
+}
+
+footer {
+    background-color: #fff;
+    height: 10%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+   
+}
