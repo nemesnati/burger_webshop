@@ -62,7 +62,7 @@ app.post("/burgers", (req, res) => {
 
 app.get("/about", (req, res) => {
   res.json(
-    `Burger Land was born from a shared love for burgers and a dream to create an online community for burger enthusiasts. In 2019, it started as a small online platform for sharing recipes and tips. As the community grew, so did the vision. In 2020, the Burger Land Marketplace launched, offering a variety of burger-related products. In 2021, the Burger Builder tool was introduced, allowing users to create custom burgers and order them from local joints. Today, Burger Land is a thriving community and marketplace for burger lovers. Join us and make every bite an adventure! 🍔🎉`
+    `Burger Land was born from a shared <strong>love for burgers</strong> and a dream to create an online community for burger enthusiasts. In 2019, it started as a small online platform for sharing recipes and tips. As the community grew, so did the vision. In 2020, the <strong>Burger Land Marketplace</strong> launched, offering a variety of burger-related products. In 2021, the Burger Builder tool was introduced, allowing users to create custom burgers and order them from local joints. Today, Burger Land is a <strong>thriving community and marketplace</strong> for burger lovers. Join us and make every bite an adventure! 🍔🎉`
   );
 });
 

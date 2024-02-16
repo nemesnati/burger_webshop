@@ -8,12 +8,10 @@
     scroll-behavior: smooth;
 }
 
-body{
-    width:100%;
-    height:auto;
-}
 
 div#root {
+    width:100%;
+    height: 100vh;
     display: flex;
     flex-direction: column;
 }
@@ -21,15 +19,16 @@ div#root {
 header {
     background-color: #fff;
    
-    width: 100%;
+    max-width: 100%;
     display: flex;
+    flex-wrap: wrap;
     justify-content: space-between;
     align-items: center;
-    padding: 20px 10%;
+    padding: 45px 10%;
 }
 
 .logo{
-    font-size: 30px;
+    font-size: clamp(8px,5vw + 1rem, 40px);
     font-weight: 800;
     color: rgb(128, 76, 12);
     text-transform: uppercase;
@@ -46,12 +45,12 @@ header {
     display: flex;
     justify-content: center;
     align-items: center;
-    gap: 20px
+    gap: 15px
 }
 
 .navbars a {
     color: rgb(128, 76, 12);
-    font-size: 16px;
+    font-size: clamp(8px,4vw + 1rem, 40px);
     font-weight: 600;
     padding: 5px 10px;
     margin: 2px 25px;
@@ -65,69 +64,60 @@ header {
     cursor: pointer;
 }
 
-.h-icons{
-    padding: 6px 14px;
-    background: rgb(128, 76, 12);
-    border-radius: 5rem;
-}
-
-.h-icons i{
-    color: rgb(255, 255, 255);
-    font-size: 18px;
-    margin-right: 15px;
-    margin-left: 8px;
-}
-
 .show{
     display: active;
 }
 
 .navigators {
     display: flex;
+    flex-wrap: wrap;
     justify-content: center;
     align-items: center;
-    gap: 20px
+    gap: 50px
 }
 
 main {
-    height: 85vh;
+    padding: 90px 10px 10px 10px;
     background-color: #fff;
     display: flex;
-    justify-content: space-around;
+    flex-direction:row;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
     align-items: center;
-    
+    max-width: 100%;
 }
 
 .textbox{
-    width: 40%;
-    line-height: 2;
-    font-size: 22px;
-    text-align: justify;
+    max-height: fit-content;
+    max-width: 56vw;
 }
 
 .textbox h1{
-    font-size: 32px;
+    font-size: clamp(8px,5vw + 1rem, 40px);
     margin-bottom: 1rem;
 }
 
 .textbox p{
-    font-size: 24px;
-    font-weight: 500;
+    max-width: 100%;
+    max-height: 100%;
+    font-size: clamp(2px,3vw + 1rem, 30px);
+    font-weight: 400;
     color: black;
-    line-height: 40px;
+    line-height: 45px;
     margin-bottom: 2.3rem;
 }
 
 .picture img{
-    height: 400px;
-    width: auto;
+    display: block;
+    max-width: 100%;
+    max-height: 500px;
 }
 
 .about-text {
-    width: 70%;
+    width: 60%;
     letter-spacing: 0.1em;
     line-height: 2;
-    font-size: 22px;
+    font-size: 30px;
     text-align: justify;
 }
 
@@ -219,8 +209,8 @@ span.cart-price {
 }
 
 .burgercard {
-    width: 15%;
-    height: 270px;
+    width: 200px;
+    min-height: 270px;
    
     text-align: center;
     cursor: pointer;
@@ -301,10 +291,39 @@ button.wish-btn {
 }
 
 footer {
-    background-color: #fff;
-    height: 10%;
+    width: 100%;
+    height: 100%;
+    background-color: #ffffff;
     display: flex;
     justify-content: center;
-    align-items: center;
-   
+    align-items: flex-end;
+    padding-bottom: 10px;
+}
+    
+
+@media (max-width: 1099px) {
+    .textbox{
+        max-height: fit-content;
+        max-width: 90vw;
+    }
+    .about-text {
+        width: 80%;
+        letter-spacing: normal;
+        font-size: 25px;
+        line-height: normal;
+    }
+    .navigators {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        align-items: center;
+        gap: 10px
+    }
+    .row {
+        display: flex;
+        flex-direction: column;
+        flex-wrap: nowrap;
+        margin: 0 -16px;
+        gap: 10px;
+      }
 }
