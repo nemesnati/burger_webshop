@@ -18,7 +18,6 @@ const headerComponent = () => `
     <ul class="navigators">
         <li class="about"><a>About</a></li>
         <li class="menu"><a>Menu</a></li>
-        <li class="wish"><a>Make your own</a></li>
     </ul>  
 </div>
 
@@ -48,11 +47,11 @@ const aboutComponent = (data) => `
 const burgersComponent = (data) => `
 
     <div class="burgercard">
-        <div><img src="public/images/classic.jpg" alt="pizza"></div>
+        <div><img src=${data.img} alt="pizza"></div>
         <h2>${data.name}</h2>
         <h4>${data.price}</h4>
         <h2>${data.meat_patty_weight}</h2>
-        <p>${data.toppings}</p>
+        <p>${data.topping}</p>
     </div>
 `;
 
@@ -115,100 +114,100 @@ const cartComponent = () => `
 </div>
 `;
 
-const wishComponent = () => `
-    <div id="burgerBuilder">  
+// const wishComponent = () => `
+//     <div id="burgerBuilder">
 
-        <h2>Choose base:</h2>
-        <div class="base">
-            <label>
-                <input type="radio" name="base" id="tomatoSauce"> Special Burger Land Sauce
-            </label>
+//         <h2>Choose sauce:</h2>
+//         <div class="base">
+//             <label>
+//                 <input type="radio" name="base" id="specialSauce"> Special Burger Land Sauce
+//             </label>
 
-            <label>
-                <input type="radio" name="base" id="bbqSauce"> BBQ Sauce
-            </label>
+//             <label>
+//                 <input type="radio" name="base" id="bbqSauce"> BBQ Sauce
+//             </label>
 
-            <label>
-                <input type="radio" name="base" id="oliveOil"> Garlic Mayo
-            </label>
+//             <label>
+//                 <input type="radio" name="base" id="garlicMayo"> Garlic Mayo
+//             </label>
 
-            <label>
-                <input type="radio" name="base" id="pestoSauce"> Pesto Sauce
-            </label>
+//             <label>
+//                 <input type="radio" name="base" id="pestoSauce"> Pesto Sauce
+//             </label>
 
-            <label>
-                <input type="radio" name="base" id="buffaloSauce"> Buffalo Sauce
-            </label>
-        </div>
+//             <label>
+//                 <input type="radio" name="base" id="buffaloSauce"> Buffalo Sauce
+//             </label>
+//         </div>
 
-        <h2>Choose toppings:</h2>
-        <div  class="toppings">
-            <label>
-                <input type="checkbox" id="pepperoniCheckbox"> Beef patty
-            </label>
-            
-            <label>
-                <input type="checkbox" id="mushroomsCheckbox"> Mushrooms
-            </label>
-            
-            <label>
-                <input type="checkbox" id="olivesCheckbox"> Chicken patty
-            </label>
-            <label>
-                <input type="checkbox" id="mozzarellaCheeseCheckbox"> Mozzarella Cheese
-            </label>
-            <label>
-                <input type="checkbox" id="blackOlivesCheckbox"> Cheddar
-            </label>
-            <label>
-                <input type="checkbox" id="freshBasilCheckbox"> Bacon
-            </label>
-            <label>
-                <input type="checkbox" id="bellPeppersCheckbox"> Lettuce
-            </label>
-            <label>
-                <input type="checkbox" id="onionsCheckbox"> Onions
-            </label>
-            <label>
-                <input type="checkbox" id="grilledChickenCheckbox"> Tomato
-            </label>
-            <label>
-                <input type="checkbox" id="redOnionsCheckbox"> Red Onions
-            </label>
-            <label>
-                <input type="checkbox" id="cilantroCheckbox"> Pickles
-            </label>
-            <label>
-                <input type="checkbox" id="hamCheckbox"> Avocado
-            </label>
-            <label>
-                <input type="checkbox" id="pineAppleCheckbox"> Pineapple
-            </label>
-            <label>
-                <input type="checkbox" id="sausageCheckbox"> Sausage
-            </label>
-            <label>
-                <input type="checkbox" id="greenPeppersCheckbox"> Green Peppers
-            </label>
-            <label>
-                <input type="checkbox" id="ricottaCheeseCheckbox"> Ricotta Cheese
-            </label>
-            <label>
-                <input type="checkbox" id="garlicCheckbox"> Fried Egg
-            </label>
-            <label>
-                <input type="checkbox" id="spinachCheckbox"> Spinach
-            </label>
-            <label>
-                <input type="checkbox" id="parmesanCheckbox"> Parmesan
-            </label>
-            <label>
-                <input type="checkbox" id="blueCheeseCheckbox"> Blue Cheese
-            </label>
-        </div>
-        <button class="wish-btn">Send</button>
-    </div>
-    `;
+//         <h2>Choose toppings:</h2>
+//         <div  class="toppings">
+//             <label>
+//                 <input type="checkbox" id="pepperoniCheckbox"> Beef patty
+//             </label>
+
+//             <label>
+//                 <input type="checkbox" id="mushroomsCheckbox"> Mushrooms
+//             </label>
+
+//             <label>
+//                 <input type="checkbox" id="chickenCheckbox"> Chicken patty
+//             </label>
+//             <label>
+//                 <input type="checkbox" id="mozzarellaCheeseCheckbox"> Mozzarella Cheese
+//             </label>
+//             <label>
+//                 <input type="checkbox" id="cheddarCheckbox"> Cheddar
+//             </label>
+//             <label>
+//                 <input type="checkbox" id="baconCheckbox"> Bacon
+//             </label>
+//             <label>
+//                 <input type="checkbox" id="lettuceCheckbox"> Lettuce
+//             </label>
+//             <label>
+//                 <input type="checkbox" id="onionsCheckbox"> Onions
+//             </label>
+//             <label>
+//                 <input type="checkbox" id="tomatoCheckbox"> Tomato
+//             </label>
+//             <label>
+//                 <input type="checkbox" id="redOnionsCheckbox"> Red Onions
+//             </label>
+//             <label>
+//                 <input type="checkbox" id="picklesCheckbox"> Pickles
+//             </label>
+//             <label>
+//                 <input type="checkbox" id="avocadoCheckbox"> Avocado
+//             </label>
+//             <label>
+//                 <input type="checkbox" id="pineappleCheckbox"> Pineapple
+//             </label>
+//             <label>
+//                 <input type="checkbox" id="sausageCheckbox"> Sausage
+//             </label>
+//             <label>
+//                 <input type="checkbox" id="greenPeppersCheckbox"> Green Peppers
+//             </label>
+//             <label>
+//                 <input type="checkbox" id="ricottaCheeseCheckbox"> Ricotta Cheese
+//             </label>
+//             <label>
+//                 <input type="checkbox" id="friedEggCheckbox"> Fried Egg
+//             </label>
+//             <label>
+//                 <input type="checkbox" id="spinachCheckbox"> Spinach
+//             </label>
+//             <label>
+//                 <input type="checkbox" id="parmesanCheckbox"> Parmesan
+//             </label>
+//             <label>
+//                 <input type="checkbox" id="blueCheeseCheckbox"> Blue Cheese
+//             </label>
+//         </div>
+//         <button class="wish-btn">Send</button>
+//     </div>
+//     `;
 
 const burgerNameComponent = (burgerH2) => `<div>${burgerH2}</div>`;
 
@@ -330,10 +329,10 @@ function init() {
       });
   });
 
-  const wishElement = document.querySelector(".wish");
-  wishElement.addEventListener("click", () => {
-    mainElement.innerHTML = "";
-    mainElement.insertAdjacentHTML("beforeend", wishComponent());
-  });
+  //   const wishElement = document.querySelector(".wish");
+  //   wishElement.addEventListener("click", () => {
+  //     mainElement.innerHTML = "";
+  //     mainElement.insertAdjacentHTML("beforeend", wishComponent());
+  //   });
 }
 init();

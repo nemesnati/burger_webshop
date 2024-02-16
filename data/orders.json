@@ -1,0 +1,39 @@
+[
+  {
+    "id": 0,
+    "pizza": {
+      "name": ""
+    },
+    "total": 0,
+    "name": {
+      "full": ""
+    },
+    "email": "",
+    "shipping": {
+      "address": "",
+      "city": "",
+      "state": "",
+      "zip": 0
+    }
+  },
+  {
+    "burger": {
+      "name": [
+        "Classic Burger",
+        "Jalapeno Burger"
+      ]
+    },
+    "total": 4.99,
+    "name": {
+      "full": "Natália Nemes"
+    },
+    "email": "nemes@nati.com",
+    "shipping": {
+      "address": "budapest utca 12",
+      "city": "budapest",
+      "state": "pest megye",
+      "zip": "1331"
+    },
+    "id": 1
+  }
+]
